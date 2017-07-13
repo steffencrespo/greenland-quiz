@@ -18,10 +18,16 @@
 				<form>
 				  <input type="radio" name="gender" value="male" checked> Male<br>
 				  <input type="radio" name="gender" value="female"> Female<br>
-				  <input type="radio" name="gender" value="other"> Other
+				  <input type="radio" name="gender" value="other"> Other<br>
+				  <input type="submit" value="Next">
 				</form>
+				<p>Question 9 of 10</p>
 			</div>
-			<footer role="quizinfo"></footer>
+			<div class="feedback-box hidden">
+				<p>PASS!</p>
+				<button class="restart-button">Restart</button>
+			</div>
+			<footer role="quizinfo-footer"></footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="app.js"></script>
