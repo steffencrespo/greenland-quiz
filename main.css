@@ -11,9 +11,18 @@ body {
   margin: 0 auto;
 }
 
-.question-box {
-	display: block;
-	border: 1px solid black;	
+.box {
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  padding: 20px;
+}
+
+.quiz-question-text {
+  display: block;
+  color: grey;
+  font-style: italic;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 .hidden {
