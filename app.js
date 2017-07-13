@@ -21,11 +21,11 @@ function composeQuestion(question) {
 				<div class="${QUIZ_QUESTION_BOX}">
 				<p>${questionText}</p>
 				<form class="${QUIZ_QUESTION_FORM}">
-				  <input type="radio" value="${answers[0]}"> ${answers[0]}<br>
-				  <input type="radio" value="${answers[1]}"> ${answers[1]}<br>
-				  <input type="radio" value="${answers[2]}"> ${answers[2]}<br>
-				  <input type="radio" value="${answers[3]}"> ${answers[3]}<br>
-				  <input type="radio" value="${answers[4]}"> ${answers[4]}<br>
+				  <input type="radio" name="answer" value="${answers[0]}"> ${answers[0]}<br>
+				  <input type="radio" name="answer" value="${answers[1]}"> ${answers[1]}<br>
+				  <input type="radio" name="answer" value="${answers[2]}"> ${answers[2]}<br>
+				  <input type="radio" name="answer" value="${answers[3]}"> ${answers[3]}<br>
+				  <input type="radio" name="answer" value="${answers[4]}"> ${answers[4]}<br>
 				  <input class=${QUESTION_SUBMIT_BUTTON} type="submit" value="Next">
 				</form>
 			</div>
