@@ -33,11 +33,20 @@ function composeQuestion(question) {
 	$(QUIZ_QUESTION_BOX).html(questionHtml);
 }
 
+function selectAnswerAndDisplayCorrect() {
+	// this takes care of handling user click on a radio button
+	// when user clicks an answer it evaluates it and shows whether correct or not
+}
+
 function loadNextQuestion() {
 	$("."+QUESTION_SUBMIT_BUTTON).click(function(event) {
 		event.preventDefault();
 		alert('submitted');
 	});
+}
+
+function updateQuizProgress() {
+	// this takes care of displaying and updating the progress in Question X out of Y questions
 }
 
 $(function() {
