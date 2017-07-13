@@ -1,35 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<link href="main.css" rel="stylesheet">
-		<title>Greenland Quiz App: Know more about Greenland!</title>
-	</head>
-	<body>
-		<div class="container">
-			<header role="banner" class="header">
-				<h1> Greenland Quiz</h1>
-				<p>Because you probably don't know enough about it!</p>
-			</header>
-			<form class="question-form">
-				<input class="start-btn" type="submit" value="Start">
-			</form>
-			<div class="question-box hidden">
-				<p>What is your favorite question?</p>
-				<form>
+<html>
+<head>
+	<title>Greenland Quiz App: Know more about Greenland!</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+ 	<div class="container">
+ 		<h1>Greenland Quiz</h1>
+ 		<p>Because you probably don't know enough about it!</p>
+	 	<div class="quiz-group box">
+	 		<div class="quiz-question box">
+	 			<span class="quiz-question-text">What is your favorite question?</span>
+	 			<form class="quiz-question-form">
 				  <input type="radio" name="gender" value="male" checked> Male<br>
 				  <input type="radio" name="gender" value="female"> Female<br>
 				  <input type="radio" name="gender" value="other"> Other<br>
 				  <input type="submit" value="Next">
-				</form>
-				<p>Question 9 of 10</p>
-			</div>
-			<div class="feedback-box hidden">
-				<p>PASS!</p>
-				<button class="restart-button">Restart</button>
-			</div>
-			<footer role="quizinfo-footer"></footer>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="app.js"></script>
-	</body>
+	 			</form>
+	 		</div>
+	 	</div>
+	 	<div class="quiz-question-counter box">9 of 10</div>
+	 	<div class="quiz-question-results box">9 correct</div>
+	 	<button class="quiz-reset-button">Restart</button>
+ 	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</body>
 </html>
