@@ -16,7 +16,7 @@
 // }
 
 const QUIZ_START_BUTTON = '.start-btn';
-const QUIZ_QUESTION_BOX = '.question-box';
+const QUIZ_QUESTION_BOX = '.quiz-question';
 const HIDDEN_ELEMENT = 'hidden';
 
 function hideButtonAndDisplayQuestion() {
