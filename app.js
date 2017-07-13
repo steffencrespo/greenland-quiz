@@ -13,13 +13,14 @@
 // 	}
 // }
 
-function hideElement() {
+function hideButtonAndDisplayQuestion() {
 	$('.start-btn').click(function(event) {
 		event.preventDefault();
 		$(event.currentTarget).addClass('hidden');
+		$('.question-box').removeClass('hidden');
 	});
 }
 
 $(function() {
-	hideElement();
+	hideButtonAndDisplayQuestion();
 });
