@@ -34,16 +34,20 @@ function composeQuestion(question) {
 
 	let questionHtml = `
 				<div class="${QUIZ_QUESTION_BOX}">
-				<p>What is your favorite question?</p>
+				<p>${questionText}</p>
 				<form>
 				  <input type="radio" name="gender" value="male" checked> Male<br>
 				  <input type="radio" name="gender" value="female"> Female<br>
-				  <input type="radio" name="gender" value="other"> Other
+				  <input type="radio" name="gender" value="other"> Other<br>
+				  <input type="submit" value="Next">
 				</form>
 			</div>
 			`
+	$(QUIZ_QUESTION_BOX).html(questionHtml);
 }
 
 $(function() {
+	let question = {text: "this is one", answers: ["one", "tw", "tr", "fr"], correct: 0, googleIt: "no"};
 	hideButtonAndDisplayQuestion();
+	composeQuestion(question);
 });
