@@ -17,6 +17,10 @@ body {
   padding: 20px;
 }
 
+.start-btn {
+	width: 100%;
+}
+
 .quiz-question-text {
   display: block;
   color: grey;
