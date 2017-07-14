@@ -13,6 +13,8 @@ function hideButtonAndDisplayQuestion() {
 		event.preventDefault();
 		$(event.currentTarget).addClass(HIDDEN_ELEMENT);
 		$("."+QUIZ_QUESTION_BOX).removeClass(HIDDEN_ELEMENT);
+		$(".quiz-question-counter").show();
+		$(".quiz-question-results").show();
 	});
 }
 
@@ -60,6 +62,10 @@ function updateQuizProgress() {
 }
 
 $(function() {
+	$(".quiz-question-counter").hide();
+	$(".quiz-question-results").hide();
+	$(".quiz-reset-button").hide();
+
 	hideButtonAndDisplayQuestion();
 	composeQuestion(questions[0]);
 });
