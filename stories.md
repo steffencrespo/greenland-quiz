@@ -1,5 +1,9 @@
 # Greenland Quiz app Stories
 
+ ---> Disable next button if user has not selected an answer
+ ---> Fix reset button, it is not reloading the quiz
+ ---> Tell the user the correct and wrong answers 
+ ---> put some color
 
 ## [] Story 1: quiz has a basic structur composed of
 	
@@ -29,4 +33,4 @@
 
 ## [] Follow a11y best-practices.
 
-## [] Be fully usable by keyboard and mouse (which will be easy enough if you start with a form).## [] 
+## [] Be fully usable by keyboard and mouse (which will be easy enough if you start with a form).##
