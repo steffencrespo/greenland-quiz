@@ -1,6 +1,7 @@
 # Greenland Quiz app Stories
 
  ---> Disable next button if user has not selected an answer
+ ---> Disable new selections when user has already chosen one answer
  ---> Fix reset button, it is not reloading the quiz
  ---> Tell the user the correct and wrong answers 
  ---> put some color
