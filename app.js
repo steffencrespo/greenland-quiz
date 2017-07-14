@@ -33,6 +33,25 @@ function composeQuestion() {
 
 function updateProgressCounter() {
 	$(".quiz-question-counter").html(`<span>This is question number ${currentQuestion+1} of ${quiz.questions.length}</span>`);
+	displayRestartButtonIfLastQuestion();
+}
+
+function updateCorrectAnswersProgress() {
+	correctAnswers ++;
+	$(".quiz-question-results").html(`<span> ${correctAnswers} correct so far</span>`)
+}
+
+function displayRestartButtonIfLastQuestion() {
+	if (currentQuestion+1 == quiz.questions.length) {
+		$(".quiz-reset-button").show();
+		restartQuiz();
+	}
+}
+
+function restartQuiz() {
+	$(".quiz-reset-button").on('click', function(event) {
+		alert('please be patient, Quiz reset is under construction');
+	});
 }
 
 function selectAnswerAndDisplayCorrect() {
@@ -40,8 +59,9 @@ function selectAnswerAndDisplayCorrect() {
 	$(".quiz-question").on('click', "input[name='answer']", function(event) {
 		// alert($("input[name='answer']:checked").val());
 		if ($("input[name='answer']:checked").val() == quiz.questions[currentQuestion].correct) {
-			alert($("input[name='answer']:checked").val());
+			updateCorrectAnswersProgress();
 		}
+
 	});
 
 	// this takes care of handling user click on a radio button
@@ -56,12 +76,7 @@ function loadNextQuestion() {
 	});
 }
 
-function updateQuizProgress() {
-	// this takes care of displaying and updating the progress in Question X out of Y questions
-}
-
-$(function() {
-
+function loadQuiz() {
 	$("#quiz-title").text(quiz.name);
 	$(".quiz-question").hide();
 	$(".quiz-question-counter").hide();
@@ -70,6 +85,10 @@ $(function() {
 	loadNextQuestion();
 	selectAnswerAndDisplayCorrect();
 	hideButtonAndDisplayQuestion();
+}
+
+$(function() {
+	loadQuiz();
 });
 
 let currentQuestion = 0;
