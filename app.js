@@ -28,6 +28,11 @@ function composeQuestion() {
 			`<input class="quiz-question-submit-btn" type="submit" value="Next"></form></div>`;
 
 	$(".quiz-question").html(questionHtml);
+	updateProgressCounter();
+}
+
+function updateProgressCounter() {
+	$(".quiz-question-counter").html(`<span>This is question number ${currentQuestion+1} of ${quiz.questions.length}</span>`);
 }
 
 function selectAnswerAndDisplayCorrect() {
