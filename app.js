@@ -13,7 +13,7 @@ function hideButtonAndDisplayQuestion() {
 		event.preventDefault();
 		$(event.currentTarget).addClass(HIDDEN_ELEMENT);
 		$("."+QUIZ_QUESTION_BOX).removeClass(HIDDEN_ELEMENT);
-		$(".quiz-questiongs").show();
+		$(".quiz-question").show();
 		$(".quiz-question-counter").show();
 		$(".quiz-question-results").show();
 	});
@@ -24,16 +24,16 @@ function composeQuestion(question) {
 	let helpFromGoogle = question.googleIt;
 
 	let questionHtml = `
-				<div class="${QUIZ_QUESTION_BOX}">
+				<div class="quiz-question">
 					<p>${question.text}</p>
-					<form class="${QUIZ_QUESTION_FORM}"> `;
+					<form class="quiz-question-form"> `;
 
 	for(let i = 0; i < question.answers.length; i++) {
 		questionHtml += `
 			<input type="radio" name="answer" value="${i}"> ${question.answers[i]}<br>`;
 	}
 
-	questionHtml +=  `<input class=${QUESTION_SUBMIT_BUTTON} type="submit" value="Next">
+	questionHtml +=  `<input class="quiz-question-submit-btn" type="submit" value="Next">
 			 	</form>
 			 </div>
 			 `;
