@@ -17,30 +17,31 @@ function hideButtonAndDisplayQuestion() {
 }
 
 function composeQuestion(question) {
-	let questionText = question.text;
-	let answers = question.answers;
+	// get rid of useless variables
 	let helpFromGoogle = question.googleIt;
 
 	let questionHtml = `
 				<div class="${QUIZ_QUESTION_BOX}">
-					<p>${questionText}</p>
-					<form class="${QUIZ_QUESTION_FORM}">
-					  <input type="radio" name="answer" value="${answers[0]}"> ${answers[0]}<br>
-					  <input type="radio" name="answer" value="${answers[1]}"> ${answers[1]}<br>
-					  <input type="radio" name="answer" value="${answers[2]}"> ${answers[2]}<br>
-					  <input type="radio" name="answer" value="${answers[3]}"> ${answers[3]}<br>
-					  <input type="radio" name="answer" value="${answers[4]}"> ${answers[4]}<br>
-					  <input class=${QUESTION_SUBMIT_BUTTON} type="submit" value="Next">
-					</form>
-			</div>
-			`
+					<p>${question.text}</p>
+					<form class="${QUIZ_QUESTION_FORM}"> `;
+
+	for(let i = 0; i < question.answers.length; i++) {
+		questionHtml += `
+			<input type="radio" name="answer" value="${i}"> ${question.answers[i]}<br>`;
+	}
+
+	questionHtml +=  `<input class=${QUESTION_SUBMIT_BUTTON} type="submit" value="Next">
+			 	</form>
+			 </div>
+			 `;
+
 	$("."+QUIZ_QUESTION_BOX).html(questionHtml);
 }
 
 function selectAnswerAndDisplayCorrect() {
 	
 	$("."+QUIZ_QUESTION_BOX).on('click', QUIZ_RADIO_BUTTONS, function(event) {
-		alert($("input[name='answer']:checked").val());
+		// alert($("input[name='answer']:checked").val());
 	});
 
 	// this takes care of handling user click on a radio button
@@ -61,9 +62,9 @@ function updateQuizProgress() {
 $(function() {
 	hideButtonAndDisplayQuestion();
 	composeQuestion(questions[0]);
-	loadNextQuestion();
-	selectAnswerAndDisplayCorrect();
 });
+
+let currentQuestion = 0;
 
 let questions = [
 	{

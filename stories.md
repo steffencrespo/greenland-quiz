@@ -8,12 +8,12 @@
 	* Feedback Page: shows user progress
 	* Final Page: tells user if they passed or failed and allows them to restart
 
-## [] The starting screen should have a button that users can click to start the quiz.
+## [x] The starting screen should have a button that users can click to start the quiz.
 ## [] Users should be prompted through a series of at least 5 multiple choice questions which they can answer.
 ## [] Users should be asked questions one after the other.
-## [] Users should only be prompted with one question at a time.
-## [] Users should be able to answer questions with the mouse or keyboard.
-## [] Users should not be able to skip questions.
+## [x] Users should only be prompted with one question at a time.
+## [x] Users should be able to answer questions with the mouse or keyboard.
+## [x] Users should not be able to skip questions.
 ## [] Users should also be able to see which question they're on (for instance, "7 out of 10") and their current score ("5 correct, 2 incorrect").
 ## [] Upon submitting an answer, users should:
 	
