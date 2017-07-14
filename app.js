@@ -5,6 +5,7 @@ function hideButtonAndDisplayQuestion() {
 		$(".quiz-question-counter").show();
 		$(".quiz-question-results").show();
 		$(".start-btn").hide();
+		composeQuestion();
 	});
 }
 
@@ -60,7 +61,6 @@ $(function() {
 	$(".quiz-reset-button").hide();
 	selectAnswerAndDisplayCorrect();
 	hideButtonAndDisplayQuestion();
-	composeQuestion();
 });
 
 let currentQuestion = 0;
