@@ -4,11 +4,13 @@ function hideButtonAndDisplayQuestion() {
 		$(".quiz-question").show();
 		$(".quiz-question-counter").show();
 		$(".quiz-question-results").show();
+		$(".start-btn").hide();
 	});
 }
 
-function composeQuestion(question) {
+function composeQuestion() {
 	// get rid of useless variables
+	let question = quiz.questions[currentQuestion];
 	let helpFromGoogle = question.googleIt;
 
 	let questionHtml = 
