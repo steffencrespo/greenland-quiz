@@ -41,7 +41,7 @@ function selectAnswerAndDisplayCorrect() {
 }
 
 function loadNextQuestion() {
-	$(".quiz-question-submit-btn").click(function(event) {
+	$(".quiz-question").on('click', ".quiz-question-submit-btn", function(event) {
 		event.preventDefault();
 		currentQuestion++;
 		composeQuestion();
@@ -59,6 +59,7 @@ $(function() {
 	$(".quiz-question-counter").hide();
 	$(".quiz-question-results").hide();
 	$(".quiz-reset-button").hide();
+	loadNextQuestion();
 	selectAnswerAndDisplayCorrect();
 	hideButtonAndDisplayQuestion();
 });
