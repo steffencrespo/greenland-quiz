@@ -21,7 +21,7 @@ function composeQuestion() {
 
 	for(let i = 0; i < question.answers.length; i++) {
 		questionHtml += 
-			`<input type="radio" name="answer" value="${i}"> ${question.answers[i]}<br>`;
+			`<input class="quiz-answer" type="radio" name="answer" value="${i}"> ${question.answers[i]}<br>`;
 	}
 
 	questionHtml +=  
