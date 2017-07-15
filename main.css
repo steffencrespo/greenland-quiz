@@ -4,6 +4,7 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
+	background-color: #ceffde;
 }
 
 .container {
@@ -39,12 +40,19 @@ body {
 }
 
 ul {
+	display: inline-block;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 #nav-logo {
+	float: right;
 	max-height: 90px;
-	width: 100%;
+	max-width: 290px;
+}
+
+#nav-moto {
+	float: left;
 }
