@@ -50,7 +50,7 @@ function displayRestartButtonIfLastQuestion() {
 
 function restartQuiz() {
 	$(".quiz-reset-button").on('click', function(event) {
-		alert('please be patient, Quiz reset is under construction');
+		location.reload();
 	});
 }
 
