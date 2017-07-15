@@ -24,8 +24,7 @@ function composeQuestion() {
 			`<input class="quiz-answer" type="radio" name="answer" value="${i}"> ${question.answers[i]}<br>`;
 	}
 
-	questionHtml +=  
-			`</form></div>`;
+	questionHtml += `</form></div>`;
 
 	$(".quiz-question").html(questionHtml);
 	hideNextQuestionButton();
@@ -61,6 +60,12 @@ function selectAnswerAndDisplayCorrect() {
 		displayNextQuestionButton();
 		if ($("input[name='answer']:checked").val() == quiz.questions[currentQuestion].correct) {
 			updateCorrectAnswersProgress();
+			$(".quiz-question").html(`<div><span>Well done, your answer is correct!</span></div>`);
+		} else {
+			$(".quiz-question").html(`
+				<div><span>The right answer for ${quiz.questions[currentQuestion].text} is  
+				-------------
+				</span></div>`);
 		}
 
 	});
