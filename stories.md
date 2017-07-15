@@ -1,17 +1,18 @@
 # Greenland Quiz app Stories
 
- ---> Disable next button if user has not selected an answer
- ---> Disable new selections when user has already chosen one answer
- ---> Fix reset button, it is not reloading the quiz
- ---> Tell the user the correct and wrong answers 
- ---> put some color
+ [x] ---> Disable next button if user has not selected an answer
+ 	[ ] ---> do not show next button on last question
+ [x] ---> Disable new selections when user has already chosen one answer
+ [x] ---> Fix reset button, it is not reloading the quiz
+ [ ] ---> Tell the user the correct and wrong answers 
+ [ ] ---> put some color
 
 ## [] Story 1: quiz has a basic structur composed of
 	
-	* Start Page: no question, allows user to click and start the quiz
-	* Question Page: shows the current question and choices related
-	* Feedback Page: shows user progress
-	* Final Page: tells user if they passed or failed and allows them to restart
+	* [x] Start Page: no question, allows user to click and start the quiz
+	* [x] Question Page: shows the current question and choices related
+	* [x] Feedback Page: shows user progress
+	* [] Final Page: tells user if they passed or failed and allows them to restart
 
 ## [x] The starting screen should have a button that users can click to start the quiz.
 ## [x] Users should be prompted through a series of at least 5 multiple choice questions which they can answer.
@@ -27,7 +28,7 @@
 
 ## [] Users should be shown their overall score at the end of the quiz. In other words, how many questions they got right out of the total questions asked.
 
-## [] Users should be able to start a new game.
+## [x] Users should be able to start a new game.
 ## [x] Render questions in a <form>.
 
 ## [] Use other semantic HTML, along with CSS and jQuery.

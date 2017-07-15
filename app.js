@@ -25,9 +25,10 @@ function composeQuestion() {
 	}
 
 	questionHtml +=  
-			`<input class="quiz-question-submit-btn" type="submit" value="Next"></form></div>`;
+			`</form></div>`;
 
 	$(".quiz-question").html(questionHtml);
+	hideNextQuestionButton();
 	updateProgressCounter();
 }
 
@@ -55,9 +56,9 @@ function restartQuiz() {
 }
 
 function selectAnswerAndDisplayCorrect() {
-	
 	$(".quiz-question").on('click', "input[name='answer']", function(event) {
-		// alert($("input[name='answer']:checked").val());
+		disableRadioButtons();
+		displayNextQuestionButton();
 		if ($("input[name='answer']:checked").val() == quiz.questions[currentQuestion].correct) {
 			updateCorrectAnswersProgress();
 		}
@@ -68,8 +69,20 @@ function selectAnswerAndDisplayCorrect() {
 	// when user clicks an answer it evaluates it and shows whether correct or not
 }
 
+function displayNextQuestionButton() {
+	$(".quiz-question-submit-btn").show();
+}
+
+function hideNextQuestionButton() {
+	$(".quiz-question-submit-btn").hide();
+}
+
+function disableRadioButtons() {
+	$("input[name='answer']").attr('disabled',true);
+}
+
 function loadNextQuestion() {
-	$(".quiz-question").on('click', ".quiz-question-submit-btn", function(event) {
+	$(".quiz-group").on('click', ".quiz-question-submit-btn", function(event) {
 		event.preventDefault();
 		currentQuestion++;
 		composeQuestion();
@@ -82,7 +95,9 @@ function loadQuiz() {
 	$(".quiz-question-counter").hide();
 	$(".quiz-question-results").hide();
 	$(".quiz-reset-button").hide();
+	$(".quiz-group").append(`<input class="quiz-question-submit-btn" type="submit" value="Next">`);
 	loadNextQuestion();
+	hideNextQuestionButton();
 	selectAnswerAndDisplayCorrect();
 	hideButtonAndDisplayQuestion();
 }
