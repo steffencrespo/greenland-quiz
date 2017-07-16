@@ -22,7 +22,7 @@ function composeQuestion() {
 
 	let questionHtml = 
 		`<div class="quiz-question">
-			<p>${question.text}</p>
+			<p>${question.text}<br><br><a href="http://lmgtfy.com/?q=${question.text}" target="_blank" style="text-decoration:none">Let me google that for you...<a></p>
 			<form class="quiz-question-form"> `;
 
 	for(let i = 0; i < question.answers.length; i++) {
