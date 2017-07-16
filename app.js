@@ -61,9 +61,10 @@ function selectAnswerAndDisplayCorrect() {
 		let userAnswerId = $("input[name='answer']:checked").val();
 		if (userAnswerId == quiz.questions[currentQuestion].correct) {
 			updateCorrectAnswersProgress();
-			$(".quiz-question").html(`<div><span>Well done, your answer is correct!</span></div>`);
+			$(".quiz-question").html(`<div><span> &#9989; Well done, your answer is correct!</span></div>`);
 		} else {
 			$(".quiz-question").html(`
+				<p class='wrong'>&#10006;</p>
 				<div><span>${quiz.questions[currentQuestion].text} <br>  
 				You answered ${quiz.questions[currentQuestion].answers[userAnswerId]} <br>
 				The correct answer is ${quiz.questions[currentQuestion].answers[quiz.questions[currentQuestion].correct]}
@@ -143,7 +144,7 @@ let quiz = {
 		{
 			text: "How is a Greenland native called?",
 			answers: ["Esqimo", "Danish", "Innuit", "American", "La ponian"],
-			correct: 1,
+			correct: 2,
 			googleIt: ''
 		},
 
