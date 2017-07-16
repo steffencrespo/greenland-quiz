@@ -11,6 +11,12 @@ function hideButtonAndDisplayQuestion() {
 
 function composeQuestion() {
 	// get rid of useless variables
+	hideNextQuestionButton();
+	if (currentQuestion+1 == quiz.questions.length) {
+		displayFinalResults()
+		return;
+	}
+
 	let question = quiz.questions[currentQuestion];
 	let helpFromGoogle = question.googleIt;
 
@@ -27,13 +33,23 @@ function composeQuestion() {
 	questionHtml += `</form></div>`;
 
 	$(".quiz-question").html(questionHtml);
-	hideNextQuestionButton();
 	updateProgressCounter();
+}
+
+function displayFinalResults() {
+	let finalResults = `
+		<div class="quiz-question">
+			<p> Your answered ${correctAnswers} questions correctly out of a total of ${quiz.questions.length} questions</p>
+		</div>`;
+	$(".quiz-question").html(finalResults);
+	$(".quiz-question-counter").hide();
+	$(".quiz-question-results").hide();
+	displayRestartButtonIfLastQuestion();
+
 }
 
 function updateProgressCounter() {
 	$(".quiz-question-counter").html(`<span>This is question number ${currentQuestion+1} of ${quiz.questions.length}</span>`);
-	displayRestartButtonIfLastQuestion();
 }
 
 function updateCorrectAnswersProgress() {
