@@ -58,13 +58,15 @@ function selectAnswerAndDisplayCorrect() {
 	$(".quiz-question").on('click', "input[name='answer']", function(event) {
 		disableRadioButtons();
 		displayNextQuestionButton();
-		if ($("input[name='answer']:checked").val() == quiz.questions[currentQuestion].correct) {
+		let userAnswerId = $("input[name='answer']:checked").val();
+		if (userAnswerId == quiz.questions[currentQuestion].correct) {
 			updateCorrectAnswersProgress();
 			$(".quiz-question").html(`<div><span>Well done, your answer is correct!</span></div>`);
 		} else {
 			$(".quiz-question").html(`
-				<div><span>The right answer for ${quiz.questions[currentQuestion].text} is  
-				-------------
+				<div><span>${quiz.questions[currentQuestion].text} <br>  
+				You answered ${quiz.questions[currentQuestion].answers[userAnswerId]} <br>
+				The correct answer is ${quiz.questions[currentQuestion].answers[quiz.questions[currentQuestion].correct]}
 				</span></div>`);
 		}
 
