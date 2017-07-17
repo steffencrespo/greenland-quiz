@@ -13,7 +13,8 @@ body {
 }
 
 .box {
-	box-shadow: 10px 10px 5px #888888;
+	background-color: #bee5cb;
+	box-shadow: 6px 6px 3px #666666;
   	margin-bottom: 20px;
   	border: 1px solid grey;
   	padding: 20px;

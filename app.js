@@ -187,29 +187,29 @@ let quiz = {
 
 		{
 			text: "Greenland has a very unique type of soil only found in the Northern Hemisphere. It is called:",
-				answers: ["Frozen Clay", "Polar Ice Cap", "Shallow Chalk", "Tar Sand", "Permafrost"],
-				correct: 4,
-				googleIt: ''
+			answers: ["Frozen Clay", "Polar Ice Cap", "Shallow Chalk", "Tar Sand", "Permafrost"],
+			correct: 4,
+			googleIt: ''
 		},
 
 		{
 			text: "Out of the total area, what percentage of it is covered by the Greenland Ice Sheet?",
-				answers: ["81%", "99%", "95%", "97%", "70%"],
-				correct: 0,
-				googleIt: ''
+			answers: ["81%", "99%", "95%", "97%", "70%"],
+			correct: 0,
+			googleIt: ''
 		},
 
 		{
 			text: "Following the WWII, in 1946 the USA made an unsuccessful offer to buy Greenland from Denmark. The offered amount was:",
-				answers: ["100 thousand dollars", "1 million dollars", "100 million dollars", "90 million dollars", "1 billion dollars"],
-				correct: 2,
-				googleIt: ''
+			answers: ["100 thousand dollars", "1 million dollars", "100 million dollars", "90 million dollars", "1 billion dollars"],
+			correct: 2,
+			googleIt: ''
 		},
 
 		{
 			text: "From 1960 to 1966 the USA tried to build a subterranean network of secret missile launch sites in the Greenlandic Ice Cap, which was later abandoned as unworkable. The project was named:",
-				answers: ["Icework", "Iced Weasel", "Underground War", "Iceworm", "Sub Zero Arizona"],
-				correct: 3,
-				googleIt: ''
+			answers: ["Icework", "Iced Weasel", "Underground War", "Iceworm", "Sub Zero Arizona"],
+			correct: 3,
+			googleIt: ''
 		}
 ]};
