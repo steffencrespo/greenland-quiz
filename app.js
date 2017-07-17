@@ -80,10 +80,10 @@ function selectAnswerAndDisplayCorrect() {
 			$(".quiz-question").html(`<div><span> &#9989; Well done, your answer is correct!</span></div>`);
 		} else {
 			$(".quiz-question").html(`
-				<p class='wrong'>&#10006;</p>
-				<div><span>${quiz.questions[currentQuestion].text} <br>  
-				You answered ${quiz.questions[currentQuestion].answers[userAnswerId]} <br>
-				The correct answer is ${quiz.questions[currentQuestion].answers[quiz.questions[currentQuestion].correct]}
+				<br>  
+				<div><span>${quiz.questions[currentQuestion].text} <br> <br>  <br>
+				You answered <b>${quiz.questions[currentQuestion].answers[userAnswerId]} </b><br>
+				The correct answer is <b> ${quiz.questions[currentQuestion].answers[quiz.questions[currentQuestion].correct]} </b>
 				</span></div>`);
 		}
 
